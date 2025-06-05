@@ -13,7 +13,7 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="min-h-screen py-20 relative overflow-hidden bg-gradient-to-br from-green-900 via-teal-900 to-blue-900"
+      className="min-h-screen py-20 relative overflow-hidden bg-[#0f172a]"
     >
       {/* SVG gradient definition */}
       <svg width="0" height="0" className="hidden">

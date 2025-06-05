@@ -5,7 +5,7 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="min-h-screen py-20 relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900"
+      className="min-h-screen py-20 relative overflow-hidden bg-[#0f172a]"
     >
       {/* Animated Orbs Background */}
       <div className="absolute inset-0">
@@ -37,7 +37,7 @@ export default function ContactSection() {
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Contact Info Card */}
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:shadow-2xl hover:shadow-emerald-500/20">
+          <div className="w-full lg:w-1/2 bg-white/5 backdrop-blur-lg border rounded-lg border-white/10 hover:bg-white/10 transition-all duration-500 transform hover:shadow-2xl hover:shadow-emerald-500/20">
             <div className="p-8">
               <h3 className="text-2xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                 Contact Information
@@ -50,7 +50,9 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white">Email</h4>
-                    <p className="text-gray-300">ibrahim@example.com</p>
+                    <p className="text-gray-300">
+                      ibrahimkhalilullah680@gmail.com
+                    </p>
                   </div>
                 </div>
 
@@ -60,7 +62,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-white">Phone</h4>
-                    <p className="text-gray-300">+880 123-456-789</p>
+                    <p className="text-gray-300">+880 1734-454539</p>
                   </div>
                 </div>
 
@@ -83,19 +85,22 @@ export default function ContactSection() {
                 </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://github.com/ibrahim2337"
+                    aria-label="Github"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-emerald-500/20 transition-all duration-300"
                   >
                     <Github className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/ibrahim-khalilullah-363063345/"
+                    aria-label="LinkedIn"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-emerald-500/20 transition-all duration-300"
                   >
                     <Linkedin className="w-5 h-5" />
                   </a>
                   <a
                     href="#"
+                    aria-label="Email"
                     className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-emerald-500/20 transition-all duration-300"
                   >
                     <Mail className="w-5 h-5" />
@@ -106,44 +111,52 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form Card */}
-          <div className="bg-white/5 backdrop-blur-lg border border-white/10 hover:bg-white/10 transition-all duration-500">
+          <div className="w-full lg:w-1/2 bg-white/5 backdrop-blur-lg border rounded-lg border-white/10 hover:bg-white/10 transition-all duration-500">
             <div className="p-8">
               <h3 className="text-2xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
                 Send Message
               </h3>
 
-              <form className="space-y-6">
+              <form
+                className="space-y-6"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  // handle form data here
+                }}
+              >
                 <div>
                   <input
+                    type="text"
                     placeholder="Your Name"
-                    className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
+                    className="w-full p-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
                   />
                 </div>
                 <div>
                   <input
                     type="email"
                     placeholder="Your Email"
-                    className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
+                    className="w-full p-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
                   />
                 </div>
                 <div>
                   <input
+                    type="text"
                     placeholder="Subject"
-                    className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
+                    className="w-full p-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
                   />
                 </div>
                 <div>
                   <textarea
                     placeholder="Your Message"
                     rows={5}
-                    className="bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
+                    className="w-full p-3 rounded-md bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:border-emerald-400 transition-all duration-300"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25"
+                  className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25"
                 >
-                  <Send className="w-4 h-4 mr-2" />
+                  <Send className="w-4 h-4" />
                   Send Message
                 </button>
               </form>
