@@ -1,0 +1,756 @@
+/* Custom Animations */
+@keyframes gradient {
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up-delay {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating Particles Animation - About Section */
+.particles-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  border-radius: 50%;
+  animation: float 20s infinite linear;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Geometric Shapes Animation - Education Section */
+.geometric-shapes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  opacity: 0.1;
+  animation: moveShape 20s infinite linear;
+}
+
+.shape-1 {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+  border-radius: 20px;
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.shape-2 {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #06b6d4, #3b82f6);
+  border-radius: 50%;
+  top: 20%;
+  right: 15%;
+  animation-delay: -5s;
+}
+
+.shape-3 {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  bottom: 30%;
+  left: 20%;
+  animation-delay: -10s;
+}
+
+.shape-4 {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(45deg, #06b6d4, #8b5cf6);
+  border-radius: 15px;
+  top: 60%;
+  right: 25%;
+  animation-delay: -15s;
+}
+
+.shape-5 {
+  width: 90px;
+  height: 90px;
+  background: linear-gradient(45deg, #3b82f6, #06b6d4);
+  border-radius: 50%;
+  bottom: 20%;
+  right: 10%;
+  animation-delay: -7s;
+}
+
+.shape-6 {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #ec4899, #8b5cf6);
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  top: 40%;
+  left: 5%;
+  animation-delay: -12s;
+}
+
+@keyframes moveShape {
+  0% {
+    transform: translateX(-100px) translateY(-100px) rotate(0deg);
+  }
+  25% {
+    transform: translateX(100px) translateY(100px) rotate(90deg);
+  }
+  50% {
+    transform: translateX(-50px) translateY(200px) rotate(180deg);
+  }
+  75% {
+    transform: translateX(150px) translateY(-50px) rotate(270deg);
+  }
+  100% {
+    transform: translateX(-100px) translateY(-100px) rotate(360deg);
+  }
+}
+
+/* Animated Grid Background - Skills Section */
+.animated-grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Floating Stars Animation - Projects Section */
+.stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: linear-gradient(45deg, #06b6d4, #0891b2);
+  border-radius: 50%;
+  animation: starTwinkle 6s infinite ease-in-out;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+.star:nth-child(2n) {
+  width: 2px;
+  height: 2px;
+  background: linear-gradient(45deg, #22d3ee, #06b6d4);
+  animation-duration: 4s;
+}
+
+.star:nth-child(3n) {
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(45deg, #0891b2, #0e7490);
+  animation-duration: 8s;
+}
+
+.star:nth-child(4n) {
+  animation: starPulse 3s infinite ease-in-out;
+}
+
+@keyframes starTwinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes starPulse {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(0.8);
+    box-shadow: 0 0 5px rgba(6, 182, 212, 0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
+  }
+}
+
+/* Floating Orbs Animation - Contact Section */
+.orbs-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(
+    circle,
+    rgba(16, 185, 129, 0.2) 0%,
+    rgba(6, 182, 212, 0.1) 70%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  animation: orbFloat 12s infinite ease-in-out;
+  opacity: 0.6;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.orb:nth-child(2n) {
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(
+    circle,
+    rgba(6, 182, 212, 0.2) 0%,
+    rgba(16, 185, 129, 0.1) 70%,
+    transparent 100%
+  );
+  animation-duration: 8s;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.orb:nth-child(3n) {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(
+    circle,
+    rgba(20, 184, 166, 0.15) 0%,
+    rgba(6, 182, 212, 0.05) 70%,
+    transparent 100%
+  );
+  animation-duration: 16s;
+  border: 1px solid rgba(20, 184, 166, 0.15);
+}
+
+.orb:nth-child(4n) {
+  animation: orbPulse 6s infinite ease-in-out;
+}
+
+@keyframes orbFloat {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) scale(1);
+    opacity: 0.4;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) scale(1.1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px) translateX(-15px) scale(0.9);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translateY(-30px) translateX(5px) scale(1.05);
+    opacity: 0.5;
+  }
+}
+
+@keyframes orbPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.3;
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+    box-shadow: 0 0 0 20px rgba(16, 185, 129, 0);
+  }
+}
+
+/* Base Animations */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+.animate-fade-in-up-delay {
+  animation: fade-in-up-delay 2s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #8b5cf6, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #7c3aed, #db2777);
+}
+
+/* Hover effects */
+.hover-glow:hover {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Skill Card Styles */
+.skill-card {
+  perspective: 1000px;
+  height: 280px;
+}
+
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg);
+}
+
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.skill-card-front {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transform: rotateY(0deg);
+}
+
+.skill-card-back {
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.2),
+    rgba(6, 182, 212, 0.2)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transform: rotateY(180deg);
+}
+
+.skill-icon-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.skill-icon-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(16, 185, 129, 0.8) 120deg,
+    rgba(6, 182, 212, 0.8) 240deg,
+    transparent 360deg
+  );
+  border-radius: 50%;
+  animation: spin-slow 4s linear infinite;
+}
+
+.skill-icon {
+  position: absolute;
+  inset: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.skill-icon svg {
+  width: 36px;
+  height: 36px;
+  color: #10b981;
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.6));
+}
+
+.skill-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #10b981, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(16, 185, 129, 0.3);
+}
+
+.skill-level-indicator {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-level-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.skill-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.skill-dot-active {
+  background: linear-gradient(135deg, #10b981, #06b6d4);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+.skill-percentage {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.skill-details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-experience {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.skill-years {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.skill-meter {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.skill-circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 8;
+  transform: rotate(-90deg);
+}
+
+.skill-circle-bg {
+  stroke: rgba(255, 255, 255, 0.1);
+}
+
+.skill-circle-progress {
+  stroke: url(#skillGradient);
+  stroke-dasharray: 283;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease;
+}
+
+.skill-circle-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.8));
+  }
+}
+
+.skill-card:hover .skill-icon svg {
+  animation: pulse 2s infinite;
+}
+
+/* Compact Project Card Styles */
+.compact-project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.compact-project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
+  border-color: rgba(6, 182, 212, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-img-container {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.compact-project-card:hover .project-thumbnail {
+  transform: scale(1.05);
+}
+
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 182, 212, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.compact-project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.project-link-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.project-info {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.compact-project-card:hover .project-title {
+  color: #06b6d4;
+}
+
+.project-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.tech-badge {
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+/* Animation for project cards appearing */
+.compact-project-card {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: projectFadeIn 0.5s ease forwards;
+}
+
+.compact-project-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.compact-project-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.compact-project-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.compact-project-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.compact-project-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.compact-project-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+@keyframes projectFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
